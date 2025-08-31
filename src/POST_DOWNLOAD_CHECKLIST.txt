@@ -1,0 +1,56 @@
+# 📋 Post-Download Checklist for WayPartner
+
+## Step 1: Extract & Replace (2 minutes)
+□ Download project ZIP from Figma Make
+□ Navigate to C:\ directory
+□ Rename existing: service-center-ui → service-center-ui-backup  
+□ Extract downloaded ZIP as new service-center-ui folder
+□ Open Command Prompt: cd C:\service-center-ui
+
+## Step 2: Verify Download (2 minutes)
+□ Check files exist:
+   - App.tsx (with gtag fixes)
+   - package.json (with build:vercel script) 
+   - vercel.json (with correct outputDirectory)
+   - verify-build.js (build verification tool)
+
+□ Install dependencies: npm install
+□ Test build: npm run build:vercel
+□ Confirm output shows: "✅ Build verification... SUCCESS"
+
+## Step 3: Deploy (5 minutes)
+□ Stage changes: git add .
+□ Commit: git commit -m "🔥 COMPLETE FIX: All build errors resolved"
+□ Push: git push origin main
+□ Monitor Vercel dashboard for auto-deployment
+□ Confirm build succeeds (no "No Output Directory" error)
+
+## Step 4: Production Setup (3 minutes)  
+□ Add Vercel environment variables:
+   - VITE_SUPABASE_URL = [Your Supabase URL]
+   - VITE_SUPABASE_ANON_KEY = [Your Supabase Anon Key]
+□ Redeploy after adding variables
+□ Visit: https://service.waypartnerindia.com
+
+## Step 5: Verify Success (1 minute)
+□ Site shows green banner: "🟢 Live System: Real-time bookings active"
+□ Browser console (F12) shows: "App Version: 2025-01-30-CACHE-FIX"  
+□ Console shows: "Production Mode - Connected to Supabase"
+□ No TypeScript/gtag errors in console
+□ All WayPartner features working with real data
+
+## 🎉 Success Metrics
+✅ Vercel build succeeds without errors
+✅ Site switches from demo to production mode  
+✅ Green production banner displays
+✅ Real-time Supabase connection active
+✅ WhatsApp notifications ready
+✅ 2000+ 2-wheelers + 4000+ 4-wheelers data accessible
+
+## ⚠️ If Issues Occur
+- Build fails → Check npm run build:vercel locally first
+- Old version persists → Clear browser cache (Ctrl+Shift+R)
+- Demo mode continues → Verify environment variables added correctly
+- Connection errors → Check Supabase credentials in Vercel settings
+
+Expected Result: Complete production-ready service center management platform! 🚀

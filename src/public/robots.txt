@@ -1,0 +1,62 @@
+# WayPartner Service Center - Robots.txt
+# https://waypartner.in/robots.txt
+
+User-agent: *
+Allow: /
+
+# Sitemap location
+Sitemap: https://waypartner.in/sitemap.xml
+
+# Allow all major search engines
+User-agent: Googlebot
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+User-agent: Slurp
+Allow: /
+
+User-agent: DuckDuckBot
+Allow: /
+
+User-agent: Baiduspider
+Allow: /
+
+# Disallow dashboard and admin areas
+User-agent: *
+Disallow: /dashboard
+Disallow: /admin
+Disallow: /api/
+Disallow: /reports
+Disallow: /settings
+Disallow: /_*
+Disallow: /temp/
+Disallow: /test/
+
+# Disallow development and staging environments
+User-agent: *
+Disallow: /dev/
+Disallow: /staging/
+Disallow: /preview/
+
+# Allow important business pages
+User-agent: *
+Allow: /booking
+Allow: /register
+Allow: /status
+Allow: /green-coins
+Allow: /services
+Allow: /locations
+Allow: /contact
+Allow: /about
+Allow: /pricing
+Allow: /faq
+Allow: /blog
+
+# Crawl-delay for respectful crawling
+Crawl-delay: 1
+
+# Cache directive
+# This robots.txt file was last updated on 2025-01-28
+# For questions about this robots.txt file, contact: seo@waypartner.com
